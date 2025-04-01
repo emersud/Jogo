@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cadastro e Pesquisa de Jogos</title>
+	<link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+	<h1>Cadastro e Pesquisa de Jogos</h1>
+	<div id="cadastro">
+		<h2>Cadastro de Jogo</h2>
+		<form id="cadastroForm">
+			<label for="name">Nome:</label>
+
+
+			<input type="text" id="name" name="name" required><br>
+
+			<label for="plataform">Plataforma:</label>
+			<input type="text" id="platform" name="platform" required><br>
+
+			<button type="button" onclick="cadastrarJogo()">✖️Cadastrar</button>
+			<button type="button" onclick="atualizarJogo()">🔁Atualizar</button>
+			<button type="button" onclick="excluirJogo()">❌Excluir</button>
+			<label class="label-file"> Escolha um arquivo
+				<input type="file" id="thumbnail" name="thumbnail" accept=".jpg, .jpeg, .png" required>
+			</label>
+		</form>
+	</div>
+
+	<div id="pesquisa">
+		<h2>Pesquisa de Jogo</h2>
+		<form id="pesquisaForm">
+		            <label for="searchId">ID do Jogo:</label>
+		            <input type="text" id="searchId" name="searchId"><br>
+		            <button  type="button" id="anterior" onclick="carregarJogoAnterior()">⏪Anterior</button>
+		            <button type="button"  onclick="pesquisarJogo()">🔎Pesquisar</button>
+		            <button type="button" id="proximo" onclick="carregarJogoProximo()">⏩Proximo</button>
+		        </form>
+		<div id="resultadoPesquisa"></div>
+	</div>
+
+	<script src="Script.js"></script>
+</body>
+
+</html>
