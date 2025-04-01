@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Jogos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- Menu superior -->
+    <header class="top-menu">
+        <button class="menu-btn" onclick="abrirMenu()">☰</button>
+        <h1 class="logo">Pesquisa de Jogos</h1>
+    </header>
+
+    <!-- Menu lateral -->
+    <nav class="side-menu" id="sideMenu">
+        <button class="close-btn" onclick="fecharMenu()">✖</button>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="cadJogos.html"><i class="fas fa-plus"></i> Cadastrar Jogo</a></li>
+            <li><a href="pesquisar.html"><i class="fas fa-search"></i> Pesquisar/Editar Jogo</a></li> 
+            <li><a href="vitrine.html"><i class="fas fa-search"></i> Exibir Jogo</a></li> 
+        </ul>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main class="container">
+        <section class="product-form">
+            <h1>Localizar Jogo</h1>
+
+            <div class="form-container">  <!-- Container principal -->
+                <form id="pesquisaForm">
+                    <div class="form-group">
+                        <label for="name">ID do Jogo</label>                        
+                    </div>
+                    <div class="search-box">                        
+                        <input type="text" id="searchId" name="searchId">
+                        <button type="button" onclick="pesquisarJogo()"><i class="fas fa-search"></i></button>                        
+                    </div>
+                  
+                    <div class="form-group">
+                        <label for="name">Nome do Jogo</label>
+                        <input type="text" id="name" name="name" disabled >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="platform">Plataforma</label>
+                        <input type="text" id="platform" name="platform"disabled >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Preço</label>
+                        <input type="text" id="price" name="price" disabled >
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Gênero</label>
+                        <input type="text" id="category" name="category" disabled >
+                    </div>                 
+
+                    <div class="navegar">
+                        <button type="button"  class="btn" id="anterior" onclick="carregarJogoAnterior()">⏪</button>
+                        <button type="button" class="btn" id="proximo" onclick="carregarJogoProximo()">⏩</button>
+                        <button type="button" class="btn" onclick="atualizarJogo()">🔁</button>
+                        <button type="button" class="btn" onclick="excluirJogo()">❌</button>                        
+                    </div>                 
+                </form>
+
+                <div class="example-image" id="resultadoPesquisa">
+                    <img src="src/Imagem5.jpg" alt="Exemplo de Jogo" id="exampleImage">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

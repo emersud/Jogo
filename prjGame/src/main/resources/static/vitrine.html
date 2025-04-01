@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Jogos - Loja Porto</title> <!-- Título mais descritivo -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- Menu superior (igual às outras páginas) -->
+    <header class="top-menu">
+        <button class="menu-btn" onclick="abrirMenu()">☰</button>
+        <h1 class="logo">Pesquisa de Jogos</h1> <!-- Nome da loja -->
+    </header>
+
+    <!-- Menu lateral (igual às outras páginas, ajuste os links se necessário) -->
+    <nav class="side-menu" id="sideMenu">
+        <button class="close-btn" onclick="fecharMenu()">✖</button>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home / Jogos</a></li> <!-- Atualizado -->
+            <li><a href="cadJogos.html"><i class="fas fa-plus"></i> Cadastrar Jogo</a></li>
+            <li><a href="pesquisar.html"><i class="fas fa-search"></i> Pesquisar/Editar Jogo</a></li> <!-- Atualizado -->
+            <li><a href="vitrine.html"><i class="fas fa-search"></i> Exibir Jogo</a></li> 
+            <!-- Adicione outros links se desejar -->
+        </ul>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main class="container">
+        <section class="vitrine-jogos">
+            <h2>Jogos Disponíveis</h2>
+
+            <!-- Grade onde os jogos serão exibidos -->
+            <div class="product-grid" id="gameGrid">
+                <!-- Os cards dos jogos serão inseridos aqui pelo JavaScript -->
+                <!-- Exemplo de como um card será (gerado dinamicamente):
+                <div class="product-card">
+                    <img src="data:image/jpeg;base64,[BASE64_STRING]" alt="Nome do Jogo">
+                    <div class="product-info">
+                        <h3 class="product-name">Nome do Jogo Exemplo</h3>
+                        <p class="product-platform">Plataforma: PC</p>
+                        <p class="product-category">Gênero: RPG</p>
+                        <p class="product-price">R$ 199,90</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
+                </div>
+                -->
+                 <p id="loadingMessage">Carregando jogos...</p> <!-- Mensagem de carregamento -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Manter o script.js, vamos adicionar funções a ele -->
+    <script src="script.js"></script>
+
+</body>
+</html>

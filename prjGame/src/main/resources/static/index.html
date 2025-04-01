@@ -1,48 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cadastro e Pesquisa de Jogos</title>
-	<link rel="stylesheet" href="Style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Jogos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-	<h1>Cadastro e Pesquisa de Jogos</h1>
-	<div id="cadastro">
-		<h2>Cadastro de Jogo</h2>
-		<form id="cadastroForm">
-			<label for="name">Nome:</label>
 
+    <!-- Menu superior -->
+    <header class="top-menu">
+        <button class="menu-btn" onclick="abrirMenu()">☰</button>
+        <h1 class="logo">Meus Jogos</h1>
+        <div class="search-box">
+            <input type="text" placeholder="Pesquisar...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </header>
 
-			<input type="text" id="name" name="name" required><br>
+    <!-- Menu lateral -->
+    <nav class="side-menu" id="sideMenu">
+        <button class="close-btn" onclick="fecharMenu()">✖</button>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="cadJogos.html"><i class="fas fa-plus"></i> Cadastrar Jogo</a></li>
+            <li><a href="pesquisar.html"><i class="fas fa-plus"></i> Pesquisar Jogo</a></li>
+            <li><a href="vitrine.html"><i class="fas fa-search"></i> Exibir Jogo</a></li> 
+            <li><a href="#"><i class="fas fa-cog"></i> Configurações</a></li>
+            <li><a href="#"><i class="fas fa-question-circle"></i> Ajuda</a></li>
+        </ul>
+    </nav>
 
-			<label for="plataform">Plataforma:</label>
-			<input type="text" id="platform" name="platform" required><br>
+    <!-- Conteúdo principal -->
+    <main class="container">
 
-			<button type="button" onclick="cadastrarJogo()">✖️Cadastrar</button>
-			<button type="button" onclick="atualizarJogo()">🔁Atualizar</button>
-			<button type="button" onclick="excluirJogo()">❌Excluir</button>
-			<label class="label-file"> Escolha um arquivo
-				<input type="file" id="thumbnail" name="thumbnail" accept=".jpg, .jpeg, .png" required>
-			</label>
-		</form>
-	</div>
+    </main>
 
-	<div id="pesquisa">
-		<h2>Pesquisa de Jogo</h2>
-		<form id="pesquisaForm">
-		            <label for="searchId">ID do Jogo:</label>
-		            <input type="text" id="searchId" name="searchId"><br>
-		            <button  type="button" id="anterior" onclick="carregarJogoAnterior()">⏪Anterior</button>
-		            <button type="button"  onclick="pesquisarJogo()">🔎Pesquisar</button>
-		            <button type="button" id="proximo" onclick="carregarJogoProximo()">⏩Proximo</button>
-		        </form>
-		<div id="resultadoPesquisa"></div>
-	</div>
-
-	<script src="Script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
